@@ -70,62 +70,62 @@ Descripción breve del proyecto 2.
 ## Código de Ejemplo
 
 ```python
-class DesarrolladorFullStack:
+class FullStackDeveloper:
     def __init__(self):
-        self.habilidades = ["Python", "Django", "APIs", "HTML", "CSS", "Bootstrap", "JavaScript", "JQuery"]
-        self.objetivo = "creación y optimización de aplicaciones web y móviles"
+        self.skills = ["Python", "Django", "APIs", "HTML", "CSS", "Bootstrap", "JavaScript", "JQuery"]
+        self.goal = "creación y optimización de aplicaciones web y móviles"
 
-    def mostrar_habilidades(self):
-        return f"Habilidades de Full Stack: {', '.join(self.habilidades)}"
+    def show_skills(self):
+        return f"Habilidades de Full Stack: {', '.join(self.skills)}"
 
-    def mostrar_objetivo(self):
-        return f"Objetivo: {self.objetivo}"
+    def show_goal(self):
+        return f"Objetivo: {self.goal}"
 
 
 class DevOps:
     def __init__(self):
-        self.habilidades_devops = ["VPS", "Gunicorn", "Nginx", "PostgreSQL"]
-        self.objetivo_devops = "mejora continua y despliegue eficiente"
+        self.devops_skills = ["VPS", "Gunicorn", "Nginx", "PostgreSQL"]
+        self.devops_goal = "mejora continua y despliegue eficiente"
 
-    def mostrar_habilidades_devops(self):
-        return f"Habilidades de DevOps: {', '.join(self.habilidades_devops)}"
+    def show_devops_skills(self):
+        return f"Habilidades de DevOps: {', '.join(self.devops_skills)}"
 
-    def mostrar_objetivo_devops(self):
-        return f"Objetivo de DevOps: {self.objetivo_devops}"
+    def show_devops_goal(self):
+        return f"Objetivo de DevOps: {self.devops_goal}"
 
 
-class JorgeLasherasCastillo(DesarrolladorFullStack, DevOps):
+class JorgeLasherasCastillo(FullStackDeveloper, DevOps):
     def __init__(self):
-        DesarrolladorFullStack.__init__(self)
+        FullStackDeveloper.__init__(self)
         DevOps.__init__(self)
-        self.nombre = "Jorge Lasheras Castillo"
+        self.name = "Jorge Lasheras Castillo"
         self.roles = ["Desarrollador Full Stack", "DevOps"]
-        self.experiencia = 2  # años
-        self.contacto = {
+        self.experience = 2  # años
+        self.contact = {
             "Email": "lasherascastillojorge@gmail.com",
-            "Teléfono": "+34 666 366 242",
-            "Ubicación": "Cenes de la Vega, Granada"
+            "Phone": "+34 666 366 242",
+            "Location": "Cenes de la Vega, Granada"
         }
         self.github = "github.com/Jorge15lc"
         self.linkedin = "linkedin.com/in/jorge15lc"
 
-    def mostrar_bio(self):
-        return f"Soy {self.nombre}, un apasionado {', '.join(self.roles)} con más de {self.experiencia} años de experiencia."
+    def show_bio(self):
+        return f"Soy {self.name}, un apasionado {', '.join(self.roles)} con más de {self.experience} años de experiencia."
 
-    def mostrar_contacto(self):
-        return f"Puedes contactarme a través de {self.contacto['Email']} o al teléfono {self.contacto['Teléfono']}. Estoy ubicado en {self.contacto['Ubicación']}."
+    def show_contact(self):
+        return f"Puedes contactarme a través de {self.contact['Email']} o al teléfono {self.contact['Phone']}. Estoy ubicado en {self.contact['Location']}."
 
-    def mostrar_redes(self):
+    def show_socials(self):
         return f"Visita mi GitHub: {self.github} y mi LinkedIn: {self.linkedin}"
 
-    def mostrar_resumen(self):
-        return f"{self.mostrar_bio()} {self.mostrar_habilidades()} y {self.mostrar_habilidades_devops()}. Me enfoco en la {self.objetivo} y la {self.objetivo_devops}."
+    def show_summary(self):
+        return f"{self.show_bio()} {self.show_skills()} y {self.show_devops_skills()}. Me enfoco en la {self.goal} y la {self.devops_goal}."
 
     def __str__(self):
-        return self.mostrar_resumen()
+        return self.show_summary()
 
 
 jorge = JorgeLasherasCastillo()
-print(jorge.mostrar_resumen())
-print(jorge.mostrar_contacto())
-print(jorge.mostrar_redes())
+print(jorge.show_summary())
+print(jorge.show_contact())
+print(jorge.show_socials())
