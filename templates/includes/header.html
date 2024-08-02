@@ -6,8 +6,8 @@
       <div class="row">
         <div class="col-12 d-flex flex-wrap align-items-center">
           <div class="logo-box">
-            <a href="index.html">
-                <img src="{% static 'img/logo/logo.png' %}" alt="" />
+            <a href="{% url 'main:home' %}">
+                <img src="{% static 'img/logo/logo-circle-white-nobg.png' %}" alt="" />
             </a>
           </div>
 
@@ -23,17 +23,6 @@
                  <li><a href="{% url 'main:about' %}">{% trans "Acerca de" %}</a></li>
                  <li><a href="{% url 'main:services' %}">{% trans "Servicios" %}</a></li>
                  <li><a href="{% url 'main:projects' %}">{% trans "Proyectos" %}</a></li>
-                 {% comment %} <li class="has-dropdown">
-                   <a href="blog.html">{% trans "Blog" %}</a>
-                   <ul class="sub-menu">
-                     <li>
-                        <a href="blog.html">{% trans "Blog" %}</a>
-                     </li>
-                     <li>
-                        <a href="blog-details.html">{% trans "Detalles del Blog" %}</a>
-                     </li>
-                   </ul>
-                 </li> {% endcomment %}
                  <li><a href="{% url 'main:contact' %}">{% trans "Contacto" %}</a></li>
                </ul>
             </nav>
@@ -59,66 +48,24 @@
       <div class="row">
         <div class="col-12 d-flex flex-wrap align-items-center">
           <div class="logo-box">
-            <a href="index.html">
-               <img src="assets/img/logo/logo.png" alt="" />
+            <a href="{% url 'main:home' %}">
+              <img src="{% static 'img/logo/logo-circle-white-nobg.png' %}" alt="" />
             </a>
           </div>
           <div class="header-info-list d-none d-md-inline-block">
             <ul class="ul-reset">
-               <li><a href="mailto:mail@gerolddesign.com">{% trans "mail@gerolddesign.com" %}</a></li>
+              <li><a href="mailto:lasherascastillojorge@gmail.com">{% trans "lasherascastillojorge@gmail.com" %}</a></li>
             </ul>
           </div>
           <div class="header-menu">
             <nav>
                <ul>
-                 <li class="has-dropdown current-menu-ancestor">
-                   <a class="current-menu-item" href="index.html">{% trans "Inicio" %}</a>
-                   <ul class="sub-menu">
-                     <li class="has-dropdown current-menu-ancestor">
-                        <a href="index.html">{% trans "Modo Oscuro" %}</a>
-                        <ul class="sub-menu">
-                          <li class="current-menu-item">
-                            <a href="index.html">{% trans "Inicio Uno" %}</a>
-                          </li>
-                          <li>
-                            <a href="index-2.html">{% trans "Inicio Dos" %}</a>
-                          </li>
-                          <li>
-                            <a href="index-3.html">{% trans "Inicio Tres" %}</a>
-                          </li>
-                        </ul>
-                     </li>
-                     <li class="has-dropdown">
-                        <a href="index-light.html">{% trans "Modo Claro" %}</a>
-                        <ul class="sub-menu">
-                          <li>
-                            <a href="index-light.html">{% trans "Inicio Uno" %}</a>
-                          </li>
-                          <li>
-                            <a href="index-2-light.html">{% trans "Inicio Dos" %}</a>
-                          </li>
-                          <li>
-                            <a href="index-3-light.html">{% trans "Inicio Tres" %}</a>
-                          </li>
-                        </ul>
-                     </li>
-                   </ul>
-                 </li>
-                 <li><a href="about.html">{% trans "Acerca de" %}</a></li>
-                 <li><a href="services.html">{% trans "Servicios" %}</a></li>
-                 <li><a href="portfolio.html">{% trans "Portafolios" %}</a></li>
-                 <li class="has-dropdown">
-                   <a href="blog.html">{% trans "Blog" %}</a>
-                   <ul class="sub-menu">
-                     <li>
-                        <a href="blog.html">{% trans "Blog" %}</a>
-                     </li>
-                     <li>
-                        <a href="blog-details.html">{% trans "Detalles del Blog" %}</a>
-                     </li>
-                   </ul>
-                 </li>
-                 <li><a href="contact.html">{% trans "Contacto" %}</a></li>
+                <ul>
+                  <li><a href="{% url 'main:home' %}">{% trans "Inicio" %}</a></li>
+                 <li><a href="{% url 'main:about' %}">{% trans "Acerca de" %}</a></li>
+                 <li><a href="{% url 'main:services' %}">{% trans "Servicios" %}</a></li>
+                 <li><a href="{% url 'main:projects' %}">{% trans "Proyectos" %}</a></li>
+                 <li><a href="{% url 'main:contact' %}">{% trans "Contacto" %}</a></li>
                </ul>
             </nav>
           </div>
