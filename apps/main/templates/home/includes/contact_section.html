@@ -1,0 +1,100 @@
+{% load static i18n %}
+
+<!-- CONTACT SECTION START -->
+<section class="contact-section" id="contact-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-7 order-2 order-md-1">
+                <div class="contact-form-box wow fadeInLeft" data-wow-delay=".3s">
+                    <div class="section-header">
+                        <h2 class="section-title">{% trans "Let's work together!" %}</h2>
+                        <p>{% trans "I design and code beautifully simple things and I love what I do. It's that simple!" %}</p>
+                    </div>
+
+                    <div class="tj-contact-form">
+                        <form id="contact-form">
+                            <div class="row gx-3">
+                                <div class="col-sm-6">
+                                    <div class="form_group">
+                                        <input type="text" name="conName" id="conName" placeholder="{% trans 'Name' %}" autocomplete="off" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form_group">
+                                        <input type="text" name="conLName" id="conLName" placeholder="{% trans 'Last Name' %}" autocomplete="off" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form_group">
+                                        <input type="email" name="conEmail" id="conEmail" placeholder="{% trans 'Email' %}" autocomplete="off" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form_group">
+                                        <input type="tel" name="conPhone" id="conPhone" placeholder="{% trans 'Phone Number' %}" autocomplete="off" />
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form_group">
+                                        <select name="conService" id="conService" class="tj-nice-select">
+                                            <option value="" selected disabled>{% trans 'Choose the Service' %}</option>
+                                            <option value="ecommerce">{% trans 'eCommerce Development' %}</option>
+                                            <option value="marketplace">{% trans 'Marketplace Development' %}</option>
+                                            <option value="erp-crm">{% trans 'ERP and CRM Development' %}</option>
+                                            <option value="ai-integration">{% trans 'AI Integrations' %}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form_group">
+                                        <textarea name="conMessage" id="conMessage" placeholder="{% trans 'Message' %}"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form_btn">
+                                        <button type="submit" class="btn tj-btn-primary">{% trans 'Send Message' %}</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 offset-lg-1 col-md-5 d-flex flex-wrap align-items-center order-1 order-md-2">
+                <div class="contact-info-list">
+                    <ul class="ul-reset">
+                        <li class="d-flex flex-wrap align-items-center position-relative wow fadeInRight" data-wow-delay=".4s">
+                            <div class="icon-box">
+                                <i class="flaticon-phone-call"></i>
+                            </div>
+                            <div class="text-box">
+                                <p>{% trans 'Phone' %}</p>
+                                <a href="tel:+34666366242">+34 666 366 242</a>
+                            </div>
+                        </li>
+                        <li class="d-flex flex-wrap align-items-center position-relative wow fadeInRight" data-wow-delay=".5s">
+                            <div class="icon-box">
+                                <i class="flaticon-mail-inbox-app"></i>
+                            </div>
+                            <div class="text-box">
+                                <p>{% trans 'Email' %}</p>
+                                <a href="mailto:lasherascastillojorge@gmail.com">lasherascastillojorge@gmail.com</a>
+                            </div>
+                        </li>
+                        <li class="d-flex flex-wrap align-items-center position-relative wow fadeInRight" data-wow-delay=".6s">
+                            <div class="icon-box">
+                                <i class="flaticon-location"></i>
+                            </div>
+                            <div class="text-box">
+                                <p>{% trans 'Address' %}</p>
+                                <a href="#">Cenes de la Vega, <br />Granada, España</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- CONTACT SECTION END -->

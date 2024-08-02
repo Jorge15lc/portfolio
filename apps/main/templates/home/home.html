@@ -1,1 +1,335 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}Home{% endblock %}
+
+{% block extracss %}{% endblock %}
+
+
+
+{% block content %}
+    
+    {% include 'home/includes/hero_section.html' %}
+
+    {% include 'home/includes/services_section.html' %}
+
+    {% include 'home/includes/portfolio_section.html' %}
+
+    {% include 'home/includes/resume_section.html' %}
+
+    {% include 'home/includes/skills_section.html' %}
+
+    {% include 'home/includes/testimonial_section.html' %}
+
+    {% include 'home/includes/contact_section.html' %}
+
+
+{% endblock %}
+
+{% block modals %}
+
+<!-- start: Service Popup -->
+<div id="service-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide" data-lenis-prevent>
+    <div class="popup_modal_img">
+    <img src="{% static 'img/services/modal-img.jpg' %}" alt="" />
+    </div>
+    <div class="popup_modal_content">
+    <div class="service_details">
+        <div class="row">
+            <div class="col-lg-7 col-xl-8">
+                <div class="service_details_content">
+                <div class="service_info">
+                    <h6 class="subtitle">SERVICES</h6>
+                    <h2 class="title">UI/UX Design</h2>
+                    <div class="desc">
+                        <p>
+                            Elizabeth some dodgy chavs are you taking the piss faff about pardon amongst car boot a
+                            load of old tosh is
+                            cracking goal blow off telling brown.
+                        </p>
+
+                        <p>
+                            Brolly show off show off pick your nose and blow off well A bit of how’s your father
+                            tomfoolery blimey, me old
+                            mucker starkers Queen’s English dropped a clanger bite your arm spiffing good time
+                            burke Why chancer. Hotpot bum
+                            bag cracking goal young delinquent naff bugger cup of chars bender loo it’s all gone to
+                            pot the nancy cheeky.
+                        </p>
+
+                        <p>
+                            At public school cras bog some dodgy chav Richard Why argy bargy vagabon William bender
+                            matie boy, off his nut
+                            chancer Jeffrey up the kyver say mufty you mug ummm telling pear shaped Oxford owt to
+                            do with me do one so said
+                            are you taking his.
+                        </p>
+                    </div>
+
+                    <h3 class="title">Services Process</h3>
+                    <div class="desc">
+                        <p>
+                            Elizabeth some dodgy chavs are you taking the piss faff about pardon amongst car boot a
+                            load of old tosh is
+                            cracking goal blow off telling brown.
+                        </p>
+                    </div>
+                    <ul>
+                        <li>Reinvent Your Business to Better</li>
+                        <li>Pioneering the Internet's First</li>
+                        <li>Pioneering the Design World's First</li>
+                        <li>Pioneering the Design World's First</li>
+                        <li>Pioneering the Design World's First</li>
+                        <li>Pioneering the Design World's First</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-xl-4">
+                <div class="tj_main_sidebar">
+                <div class="sidebar_widget services_list">
+                    <div class="widget_title">
+                        <h3 class="title">All Services</h3>
+                    </div>
+                    <ul>
+                        <li class="active">
+                            <button>
+                            <i class="flaticon-design"></i>
+                            Branding Design
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                            <i class="flaticon-3d-movie"></i>
+                            3D Animation
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                            <i class="flaticon-ux-design"></i>
+                            UI/UX Design
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                            <i class="flaticon-web-design"></i>
+                            Web Design
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                            <i class="flaticon-ui-design"></i>
+                            App Design
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar_widget contact_form">
+                    <div class="widget_title">
+                        <h3 class="title">Get in Touch</h3>
+                    </div>
+
+                    <form action="index.html">
+                        <div class="form_group">
+                            <input type="text" name="name" id="name" placeholder="Name" autocomplete="off" />
+                        </div>
+                        <div class="form_group">
+                            <input type="email" name="semail" id="semail" placeholder="Email" autocomplete="off" />
+                        </div>
+                        <div class="form_group">
+                            <textarea name="smessage" id="smessage" placeholder="Your message"
+                            autocomplete="off"></textarea>
+                        </div>
+                        <div class="form_btn">
+                            <button class="btn tj-btn-primary" type="submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- end: Service Popup -->
+
+<!-- Portfolio Popup -->
+<div id="portfolio-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide" data-lenis-prevent>
+    <div class="popup_modal_img">
+       <img src="./assets/img/portfolio/modal-img.jpg" alt="" />
+    </div>
+    <div class="popup_modal_content">
+       <div class="portfolio_info">
+          <div class="portfolio_info_text">
+             <h2 class="title">DStudio</h2>
+             <div class="desc">
+                <p>
+                   They are was greater open above shelter lets itself under appear sixth open gathering made upon
+                   can't own above midst
+                   gathering gathered he one us saying can't divide.
+                </p>
+             </div>
+             <a href="#" class="btn tj-btn-primary">live preview <i class="fal fa-arrow-right"></i></a>
+          </div>
+          <div class="portfolio_info_items">
+             <div class="info_item">
+                <div class="key">Category</div>
+                <div class="value">Web Design</div>
+             </div>
+             <div class="info_item">
+                <div class="key">Client</div>
+                <div class="value">Artboard Studio</div>
+             </div>
+             <div class="info_item">
+                <div class="key">Start Date</div>
+                <div class="value">August 20, 2023</div>
+             </div>
+             <div class="info_item">
+                <div class="key">Designer</div>
+                <div class="value"><a href="#">ThemeJunction</a></div>
+             </div>
+          </div>
+       </div>
+       <div class="portfolio_gallery owl-carousel">
+          <div class="gallery_item">
+             <img src="./assets/img/portfolio-gallery/p-gallery-1.jpg" alt="" />
+          </div>
+          <div class="gallery_item">
+             <img src="./assets/img/portfolio-gallery/p-gallery-2.jpg" alt="" />
+          </div>
+          <div class="gallery_item">
+             <img src="./assets/img/portfolio-gallery/p-gallery-3.jpg" alt="" />
+          </div>
+          <div class="gallery_item">
+             <img src="./assets/img/portfolio-gallery/p-gallery-4.jpg" alt="" />
+          </div>
+       </div>
+       <div class="portfolio_description">
+          <h2 class="title">Project Description</h2>
+          <div class="desc">
+             <p>
+                The goal is there are many variations of passages of Lorem Ipsum available, but the majority have
+                suffered alteration in some
+                form, by injected humour, or randomised words which don't look even slightly believable.
+             </p>
+
+             <p>
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                alteration in some form, by
+                injected humour, or randomised words which don't look even slightly believable. If you are going to
+                use a passage of Lorem
+                Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+             </p>
+          </div>
+       </div>
+       <div class="portfolio_story_approach">
+          <div class="portfolio_story">
+             <div class="story_title">
+                <h4 class="title">The story</h4>
+             </div>
+             <div class="story_content">
+                <p>
+                   There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                   alteration in some form, by
+                   injected humour, or randomised words which don't look even slightly believable. If you are going
+                   to use a passage of Lorem
+                   Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. There
+                   are many variations of
+                   passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by
+                   injected humour, or
+                   randomised words which don't look even slightly believable. If you are going to use a passage of
+                   Lorem Ipsum, you need to
+                   be sure there isn't anything embarrassing hidden in the middle of text.
+                </p>
+             </div>
+          </div>
+          <div class="portfolio_approach">
+             <div class="approach_title">
+                <h4 class="title">OUR APPROACH</h4>
+             </div>
+             <div class="approach_content">
+                <p>
+                   There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                   alteration in some form, by
+                   injected humour, or randomised words which don't look even slightly believable. If you are going
+                   to use a passage of Lorem
+                   Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. There
+                   are many variations of
+                   passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by
+                   injected humour, or
+                   randomised words which don't look even slightly believable. If you are going to use a passage of
+                   Lorem Ipsum, you need to
+                   be sure there isn't anything embarrassing hidden in the middle of text.
+                </p>
+             </div>
+          </div>
+       </div>
+       <div class="portfolio_navigation">
+          <div class="navigation_item prev-project">
+             <a href="#" class="project">
+                <i class="fal fa-arrow-left"></i>
+                <div class="nav_project">
+                   <div class="label">Previous Project</div>
+                   <h3 class="title">Sebastian</h3>
+                </div>
+             </a>
+          </div>
+          <div class="navigation_item next-project">
+             <a href="#" class="project">
+                <div class="nav_project">
+                   <div class="label">Next Project</div>
+                   <h3 class="title">Qwillo</h3>
+                </div>
+                <i class="fal fa-arrow-right"></i>
+             </a>
+          </div>
+       </div>
+    </div>
+</div>
+<!-- Portfolio Popup End -->
+
+<!-- BEGIN: Contact Form Success Modal Message -->
+<div class="modal contact_modal" id="message_sent" tabindex="-1">
+    <div class="modal-dialog">
+       <div class="modal-content">
+          <div class="modal-header">
+             <span class="modal-title"><strong>Message Sent Successfully</strong></span>
+             <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><i
+                   class="fas fa-times"></i></button>
+          </div>
+          <div class="modal-body">
+             <p>Thank you for contacting us. We will get back to you shortly.<br />Have a great day!</p>
+          </div>
+          <div class="modal-footer">
+             <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+          </div>
+       </div>
+    </div>
+ </div>
+ <!-- END: Contact Form Success Modal Message -->
+
+ <!-- BEGIN: Contact Form Fail Modal Message -->
+ <div class="modal contact_modal failed" id="message_fail" tabindex="-1">
+    <div class="modal-dialog">
+       <div class="modal-content">
+          <div class="modal-header">
+             <span class="modal-title"><strong>Error</strong></span>
+             <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><i
+                   class="fas fa-times"></i></button>
+          </div>
+          <div class="modal-body">
+             <p>Oops! Something went wrong, please try again.</p>
+          </div>
+          <div class="modal-footer">
+             <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+          </div>
+       </div>
+    </div>
+ </div>
+ <!-- END: Contact Form Fail Modal Message End -->
+
+
+{% endblock %}
+
+{% block extrajs %}{% endblock %}

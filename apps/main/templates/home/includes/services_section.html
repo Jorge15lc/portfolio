@@ -1,0 +1,116 @@
+{% load static i18n %}
+
+<!-- PORTFOLIO SECTION START -->
+<section class="portfolio-section" id="works-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-header text-center">
+                    <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">{% trans "Mis Trabajos Recientes" %}</h2>
+                    <p class="wow fadeInUp" data-wow-delay=".4s">
+                        {% trans "Convertimos tus ideas y deseos en un proyecto web único que te inspire a ti y a tus clientes." %}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="portfolio-filter text-center wow fadeInUp" data-wow-delay=".5s">
+                    <div class="button-group filter-button-group">
+                        <button data-filter="*" class="active">{% trans "Todos" %}</button>
+                        <button data-filter=".ecommerce">{% trans "eCommerce" %}</button>
+                        <button data-filter=".marketplace">{% trans "Marketplaces" %}</button>
+                        <button data-filter=".erp-crm">{% trans "ERPs y CRMs" %}</button>
+                        <button data-filter=".ai-integration">{% trans "Integraciones AI" %}</button>
+                        <div class="active-bg"></div>
+                    </div>
+                </div>
+
+                <div class="portfolio-box wow fadeInUp" data-wow-delay=".6s">
+                    <div class="portfolio-sizer"></div>
+                    <div class="gutter-sizer"></div>
+
+                    <!-- Proyecto eCommerce -->
+                    <div class="portfolio-item ecommerce">
+                        <div class="image-box">
+                            <img src="{% static 'img/portfolio/ecommerce.jpg' %}" alt="{% trans "Proyecto eCommerce" %}" />
+                        </div>
+                        <div class="content-box">
+                            <h3 class="portfolio-title">{% trans "Proyecto eCommerce" %}</h3>
+                            <p>{% trans "Creación y optimización de una plataforma eCommerce para una experiencia de compra fluida y eficiente." %}</p>
+                            <i class="flaticon-up-right-arrow"></i>
+                            <button data-mfp-src="#portfolio-wrapper" class="portfolio-link modal-popup"></button>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto Marketplace -->
+                    <div class="portfolio-item marketplace">
+                        <div class="image-box">
+                            <img src="{% static 'img/portfolio/marketplace.jpg' %}" alt="{% trans "Proyecto Marketplace" %}" />
+                        </div>
+                        <div class="content-box">
+                            <h3 class="portfolio-title">{% trans "Proyecto Marketplace" %}</h3>
+                            <p>{% trans "Desarrollo de un Marketplace robusto para conectar vendedores y compradores de manera eficiente." %}</p>
+                            <i class="flaticon-up-right-arrow"></i>
+                            <button data-mfp-src="#portfolio-wrapper" class="portfolio-link modal-popup"></button>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto ERP/CRM -->
+                    <div class="portfolio-item erp-crm">
+                        <div class="image-box">
+                            <img src="{% static 'img/portfolio/erp-crm.jpg' %}" alt="{% trans "Proyecto ERP/CRM" %}" />
+                        </div>
+                        <div class="content-box">
+                            <h3 class="portfolio-title">{% trans "Proyecto ERP/CRM" %}</h3>
+                            <p>{% trans "Implementación de un sistema ERP/CRM para mejorar la gestión empresarial y optimizar procesos." %}</p>
+                            <i class="flaticon-up-right-arrow"></i>
+                            <button data-mfp-src="#portfolio-wrapper" class="portfolio-link modal-popup"></button>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto de Integración AI -->
+                    <div class="portfolio-item ai-integration">
+                        <div class="image-box">
+                            <img src="{% static 'img/portfolio/ai-integration.jpg' %}" alt="{% trans "Proyecto de Integración AI" %}" />
+                        </div>
+                        <div class="content-box">
+                            <h3 class="portfolio-title">{% trans "Proyecto de Integración AI" %}</h3>
+                            <p>{% trans "Integración de soluciones de Inteligencia Artificial para automatización y análisis avanzados." %}</p>
+                            <i class="flaticon-up-right-arrow"></i>
+                            <button data-mfp-src="#portfolio-wrapper" class="portfolio-link modal-popup"></button>
+                        </div>
+                    </div>
+
+                    <!-- Otro Proyecto eCommerce -->
+                    <div class="portfolio-item ecommerce">
+                        <div class="image-box">
+                            <img src="{% static 'img/portfolio/ecommerce2.jpg' %}" alt="{% trans "Otro Proyecto eCommerce" %}" />
+                        </div>
+                        <div class="content-box">
+                            <h3 class="portfolio-title">{% trans "Otro Proyecto eCommerce" %}</h3>
+                            <p>{% trans "Desarrollo de una tienda online con características personalizadas para mejorar la experiencia del usuario." %}</p>
+                            <i class="flaticon-up-right-arrow"></i>
+                            <button data-mfp-src="#portfolio-wrapper" class="portfolio-link modal-popup"></button>
+                        </div>
+                    </div>
+
+                    <!-- Otro Proyecto Marketplace -->
+                    <div class="portfolio-item marketplace">
+                        <div class="image-box">
+                            <img src="{% static 'img/portfolio/marketplace2.jpg' %}" alt="{% trans "Otro Proyecto Marketplace" %}" />
+                        </div>
+                        <div class="content-box">
+                            <h3 class="portfolio-title">{% trans "Otro Proyecto Marketplace" %}</h3>
+                            <p>{% trans "Creación de un Marketplace especializado para nichos de mercado específicos, mejorando la interacción entre usuarios." %}</p>
+                            <i class="flaticon-up-right-arrow"></i>
+                            <button data-mfp-src="#portfolio-wrapper" class="portfolio-link modal-popup"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- PORTFOLIO SECTION END -->
