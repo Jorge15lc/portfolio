@@ -30,6 +30,7 @@ class Work(TimeStampedModel):
     )
     categories = models.ManyToManyField(
         'Category',
+        related_name='works',
         verbose_name=_("Categorías"),
         help_text=_("Las categorías del trabajo.")
     )

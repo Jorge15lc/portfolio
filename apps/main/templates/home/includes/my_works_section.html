@@ -68,8 +68,14 @@
                 </div>
                 <div class="portfolio_info_items">
                     <div class="info_item">
-                        <div class="key">{% trans "Categoría" %}</div>
-                        <div class="value">{{ work.category_set.name }}</div>
+                        <div class="key">{% trans "Categorias" %}</div>
+                        <div class="value">
+                            {% for cat in work.categories.all %}
+                                {{cat.name}}
+                            {% if not forloop.last %} ,{% endif %}
+                                
+                            {% endfor %}
+                        </div>
                     </div>
                     <div class="info_item">
                         <div class="key">{% trans "Cliente" %}</div>

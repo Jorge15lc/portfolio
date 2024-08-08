@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "Sobre Mí" %}{% endblock %}
+
+{% block extracss %}{% endblock %}
+
+{% block content %}
+    <!-- START: Breadcrumb Area -->
+    <section class="breadcrumb_area" data-bg-image="{% static 'img/breadcrumb/breadcrumb-bg.webp' %}" data-bg-color="#140C1C">
+        <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="breadcrumb_content d-flex flex-column align-items-center">
+                    <h2 class="title wow fadeInUp" data-wow-delay=".3s">{% trans "Sobre Mí" %}</h2>
+                    <div class="breadcrumb_navigation wow fadeInUp" data-wow-delay=".5s">
+                    <span><a href="{% url 'main:home' %}">{% trans "Inicio" %}</a></span>
+                    <i class="far fa-long-arrow-right"></i>
+                    <span class="current-item">{% trans "Sobre Mí" %}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- END: Breadcrumb Area -->
+
+    <section class="works-section style-2" id="resume-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center">
+                        <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">{% trans "Mi Trayectoria" %}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="works-wrapper">
+                        <!-- Education Section -->
+                        <div class="works-content-item">
+                            <h3 class="title wow fadeInLeft" data-wow-delay=".3s">{% trans "Educación" %}</h3>
+                            <div class="works-inner wow fadeInUp" data-wow-delay=".4s">
+                                <div class="works-item">
+                                    <div class="works-icon">
+                                        <i class="flaticon-graduation-cap"></i>
+                                    </div>
+                                    <div class="works-content">
+                                        <span class="number">2021 - 2023</span>
+                                        <h5 class="title">Desarrollo de Aplicaciones Multiplataforma</h5>
+                                        <span class="sub-title">Escuela Arte Granada - FP Superior, España</span>
+                                    </div>
+                                </div>
+                                <div class="works-item">
+                                    <div class="works-icon">
+                                        <i class="flaticon-graduation-cap"></i>
+                                    </div>
+                                    <div class="works-content">
+                                        <span class="number">2016 - 2018</span>
+                                        <h5 class="title">Bachiller</h5>
+                                        <span class="sub-title">Beatriz Galindo, España</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Work Experience Section -->
+                        <div class="works-content-item">
+                            <h3 class="title wow fadeInRight" data-wow-delay=".3s">Work Experience</h3>
+                            <div class="works-inner wow fadeInUp" data-wow-delay=".4s">
+                                <div class="works-item">
+                                    <div class="works-icon">
+                                        <i class="flaticon-suitcase"></i>
+                                    </div>
+                                    <div class="works-content">
+                                        <span class="number">2023 - Actualidad</span>
+                                        <h5 class="title">Desarrollador Full Stack y DevOps</h5>
+                                        <span class="sub-title">Grupo VyA, España</span>
+                                        <p>Creación, despliegue y mantenimiento de aplicaciones ERP y Marketplace. Diseño de bases de datos y desarrollo de Backend y Frontend con Python, Django, Postgres, HTML, CSS, JavaScript, JQuery y Postgis.</p>
+                                    </div>
+                                </div>
+                                <div class="works-item">
+                                    <div class="works-icon">
+                                        <i class="flaticon-suitcase"></i>
+                                    </div>
+                                    <div class="works-content">
+                                        <span class="number">2023 - Actualidad</span>
+                                        <h5 class="title">Desarrollador Full Stack y DevOps</h5>
+                                        <span class="sub-title">Buyback, Granada</span>
+                                        <p>Creación y optimización de aplicaciones web eCommerce, Marketplace y Plataformas eLearning. Integración y desarrollo de APIs (Google Auth, Maps, Sage, OpenAI, Redsys, Stripe, Brevo). Desarrollo de Backend con Python, Django, DRF, Postgres, SQL y tecnologías como pandas, numpy y celery. Desarrollo de Frontend con HTML, CSS, Bootstrap, JavaScript y JQuery.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include 'home/includes/skills_section.html' %}
+
+    <div class="funfact-area">
+        <div class="row">
+            <div class="col-6 col-lg-3">
+                <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
+                    <div class="number"><span class="odometer" data-count="2">0</span></div>
+                    <div class="text">{% trans "Años de" %} <br />{% trans "Experiencia" %}</div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3">
+                <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
+                    <div class="number">+<span class="odometer" data-count="10">0</span></div>
+                    <div class="text">{% trans "Proyectos" %} <br />{% trans "Completados" %}</div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3">
+                <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
+                    <div class="number"><span class="odometer" data-count="5">0</span></div>
+                    <div class="text">{% trans "Clientes" %} <br />{% trans "Satisfechos" %}</div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3">
+                <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
+                    <div class="number"><span class="odometer" data-count="100">0</span>%</div>
+                    <div class="text">{% trans "Tasa de" %} <br />{% trans "Satisfacción" %}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block extrajs %}{% endblock %}
