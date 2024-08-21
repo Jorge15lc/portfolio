@@ -148,7 +148,6 @@ dmypy.json
 */.idea/
 
 portfolio/settings.py
-media/
 
 # Custom GitIgnores
 docker-commands.txt
