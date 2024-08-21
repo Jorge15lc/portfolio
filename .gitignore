@@ -139,7 +139,7 @@ dmypy.json
 *.sqlite
 
 # Media files
-media/
+# media/
 
 # VS Code
 .vscode/
