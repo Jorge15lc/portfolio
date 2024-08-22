@@ -5,20 +5,20 @@
        <div class="row">
           <div class="col-md-12 text-center">
              <div class="footer-logo-box">
-                <a href="#"><img src="assets/img/logo/logo.png" alt="" /></a>
+                <a href="{% url 'main:home' %}"><img src="{% static 'img/logo/logo-circle-white-nobg.png' %}" alt="" /></a>
              </div>
              <div class="footer-menu">
                 <nav>
                    <ul>
-                      <li><a href="about.html">About</a></li>
-                      <li><a href="services.html">Services</a></li>
-                      <li><a href="portfolio.html">Portfolios</a></li>
-                      <li><a href="contact.html">Contact</a></li>
+                      <li><a href="{% url 'main:about' %}">{% trans "Acerca de" %}</a></li>
+                      <li><a href="{% url 'main:services' %}">{% trans "Servicios" %}</a></li>
+                      <li><a href="{% url 'main:projects' %}">{% trans "Proyectos" %}</a></li>
+                      <li><a href="{% url 'main:contact' %}">{% trans "Contacto" %}</a></li>
                    </ul>
                 </nav>
              </div>
              <div class="copy-text">
-                <p>&copy; 2024 All rights reserved by <a href="#" target="_blank">ThemeJunction</a></p>
+                <p>&copy; 2024 {% trans "Todos los derechos reservados" %} <a href="{% url 'main:home' %}" target="_blank">JorgeLashTech</a></p>
              </div>
           </div>
        </div>

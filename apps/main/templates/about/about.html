@@ -86,7 +86,7 @@
                                         <span class="number">2023 - {% trans "Actualidad" %}</span>
                                         <h5 class="title">{% trans "Desarrollador Full Stack y DevOps" %}</h5>
                                         <span class="sub-title">Buyback, {% trans "Granada" %}</span>
-                                        <p>{% trans "Creación y optimización de aplicaciones web eCommerce, Marketplace y Plataformas eLearning. Integración y desarrollo de APIs (Google Auth, Maps, Sage, OpenAI, Redsys, Stripe, Brevo). Desarrollo de Backend con Python, Django, DRF, Postgres, SQL y tecnologías como pandas, numpy y celery. Desarrollo de Frontend con HTML, CSS, Bootstrap, JavaScript y JQuery." %}</p>
+                                        <p>{% trans "Creación y optimización de aplicaciones web eCommerce, Marketplace y Plataformas eLearning. \\nIntegración y desarrollo de APIs (Google Auth, Maps, Sage, OpenAI, Redsys, Stripe, Brevo). Desarrollo de Backend con Python, Django, DRF, Postgres, SQL y tecnologías como pandas, numpy y celery. Desarrollo de Frontend con HTML, CSS, Bootstrap, JavaScript y JQuery." %}</p>
                                     </div>
                                 </div>
                             </div>
@@ -96,36 +96,45 @@
             </div>
         </div>
     </section>
+
     {% include 'home/includes/skills_section.html' %}
 
-    <div class="funfact-area">
-        <div class="row">
-            <div class="col-6 col-lg-3">
-                <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-                    <div class="number"><span class="odometer" data-count="2">0</span></div>
-                    <div class="text">{% trans "Años de" %} <br />{% trans "Experiencia" %}</div>
-                </div>
-            </div>
-            <div class="col-6 col-lg-3">
-                <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-                    <div class="number">+<span class="odometer" data-count="10">0</span></div>
-                    <div class="text">{% trans "Proyectos" %} <br />{% trans "Completados" %}</div>
-                </div>
-            </div>
-            <div class="col-6 col-lg-3">
-                <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-                    <div class="number"><span class="odometer" data-count="5">0</span></div>
-                    <div class="text">{% trans "Clientes" %} <br />{% trans "Satisfechos" %}</div>
-                </div>
-            </div>
-            <div class="col-6 col-lg-3">
-                <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-                    <div class="number"><span class="odometer" data-count="100">0</span>%</div>
-                    <div class="text">{% trans "Tasa de" %} <br />{% trans "Satisfacción" %}</div>
+    <section class="counter-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="funfact-area">
+                        <div class="row">
+                            <div class="col-6 col-lg-3">
+                                <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
+                                    <div class="number"><span class="odometer" data-count="2">0</span></div>
+                                    <div class="text">{% trans "Años de" %} <br />{% trans "Experiencia" %}</div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-3">
+                                <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
+                                    <div class="number">+<span class="odometer" data-count="10">0</span></div>
+                                    <div class="text">{% trans "Proyectos" %} <br />{% trans "Completados" %}</div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-3">
+                                <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
+                                    <div class="number"><span class="odometer" data-count="5">0</span></div>
+                                    <div class="text">{% trans "Clientes" %} <br />{% trans "Satisfechos" %}</div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-3">
+                                <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
+                                    <div class="number"><span class="odometer" data-count="100">0</span>%</div>
+                                    <div class="text">{% trans "Tasa de" %} <br />{% trans "Satisfacción" %}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
 {% endblock %}
 

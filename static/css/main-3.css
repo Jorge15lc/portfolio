@@ -295,7 +295,7 @@
 }
 .works-section.style-2 .works-wrapper {
 	display: flex;
-	align-items: center;
+	align-items: start;
 	justify-content: space-between;
 	gap: 50px;
 	max-width: 1120px;

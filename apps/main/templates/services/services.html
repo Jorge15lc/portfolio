@@ -66,7 +66,7 @@
                  <div class="col-lg-7 col-xl-8">
                     <div class="service_details_content">
                        <div class="service_info">
-                          <h6 class="subtitle" id="modal-subtitle"></h6>
+                          <h6 class="subtitle" id="modal-subtitle">{% trans "SERVICIO" %}</h6>
                           <h2 class="title" id="modal-title"></h2>
                           <div class="desc" id="modal-content"></div>
                           <h3 class="title" id="process-title"></h3>
@@ -124,7 +124,6 @@
                 success: function(data) {
                     // Actualizar el contenido del modal
                     $('#modal-image').attr('src', data.modal_image);
-                    $('#modal-subtitle').text("SERVICIO");
                     $('#modal-title').text(data.modal_title);
                     $('#modal-content').html(data.modal_content);
                     $('#process-title').text(data.process_title);
