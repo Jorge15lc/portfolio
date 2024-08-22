@@ -27,17 +27,19 @@
    <!-- CSS here -->
    {% include 'includes/css.html' %}
    {% block extracss %}{% endblock %}
+
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1PQFKY9V4"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-J1PQFKY9V4');
+   </script>
    
 </head>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J1PQFKY9V4"></script>
-<script>
-   window.dataLayer = window.dataLayer || [];
-   function gtag(){dataLayer.push(arguments);}
-   gtag('js', new Date());
 
-   gtag('config', 'G-J1PQFKY9V4');
-</script>
 
 <body>
 
