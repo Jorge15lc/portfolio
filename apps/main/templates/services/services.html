@@ -1,0 +1,170 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "Servicios" %}{% endblock %}
+
+{% block extracss %}{% endblock %}
+
+{% block content %}
+    <section class="breadcrumb_area" data-bg-image="{% static 'img/breadcrumb/breadcrumb-bg.webp' %}"
+        data-bg-color="#140C1C">
+        <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="breadcrumb_content d-flex flex-column align-items-center">
+                    <h2 class="title wow fadeInUp" data-wow-delay=".3s">{% trans "Servicios" %}</h2>
+                    <div class="breadcrumb_navigation wow fadeInUp" data-wow-delay=".5s">
+                    <span><a href="index.html">{% trans "Inicio" %}</a></span>
+                    <i class="far fa-long-arrow-right"></i>
+                    <span class="current-item">{% trans "Servicios" %}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="service-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center">
+                        <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">{% trans "Servicios" %}</h2>
+                        <p class="wow fadeInUp text-uppercase" data-wow-delay=".4s">{% trans "Ofrecidos" %}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                {% for service in services %}
+                    <div class="col-lg-6">
+                        <div class="service-item wow fadeInLeft" data-wow-delay=".3s">
+                            <div class="service-icon">
+                                <i class="{{ service.icon }}"></i>
+                            </div>
+                            <div class="service-content">
+                                <h5 class="title"><a href="#" class="service-link" data-id="{{ service.id }}">{{ service.title }}</a></h5>
+                                <div class="desc">
+                                    <p>{{ service.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+     <!-- end: Service Area -->
+
+     <!-- start: Service Popup -->
+     <div id="service-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide" data-lenis-prevent>
+        <div class="popup_modal_img">
+           <img src="" id="modal-image" alt="" />
+        </div>
+        <div class="popup_modal_content">
+           <div class="service_details">
+              <div class="row">
+                 <div class="col-lg-7 col-xl-8">
+                    <div class="service_details_content">
+                       <div class="service_info">
+                          <h6 class="subtitle" id="modal-subtitle"></h6>
+                          <h2 class="title" id="modal-title"></h2>
+                          <div class="desc" id="modal-content"></div>
+                          <h3 class="title" id="process-title"></h3>
+                          <div class="desc" id="process-description"></div>
+                          <ul id="process-steps"></ul>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-lg-5 col-xl-4">
+                    <div class="tj_main_sidebar">
+                       <div class="sidebar_widget services_list">
+                          <div class="widget_title">
+                             <h3 class="title">{% trans "Todos los Servicios" %}</h3>
+                          </div>
+                          <ul>
+                             {% for service in services %}
+                                <li>
+                                    <button class="service-link" data-id="{{ service.id }}">
+                                        <i class="{{ service.icon }}"></i>
+                                        {{ service.title }}
+                                    </button>
+                                </li>
+                             {% endfor %}
+                          </ul>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block extrajs %}
+<script>
+    $(document).ready(function(){
+        // Manejo del click en un enlace de servicio
+        $('.service-link').on('click', function(e) {
+            e.preventDefault();
+            
+            // Remover 'active' de todos los elementos
+            $('.service-link').parent().removeClass('active');
+    
+            // Añadir 'active' al elemento clickeado
+            $(this).parent().addClass('active');
+    
+            // Obtener el ID del servicio
+            var serviceId = $(this).data('id');
+            
+            // Realizar la petición AJAX
+            $.ajax({
+                url: '/api/services/' + serviceId + '/',
+                method: 'GET',
+                success: function(data) {
+                    // Actualizar el contenido del modal
+                    $('#modal-image').attr('src', data.modal_image);
+                    $('#modal-subtitle').text("SERVICIO");
+                    $('#modal-title').text(data.modal_title);
+                    $('#modal-content').html(data.modal_content);
+                    $('#process-title').text(data.process_title);
+                    $('#process-description').html(data.process_description);
+                    $('#process-steps').html('');
+                    data.process_steps.split(',').forEach(function(step) {
+                        $('#process-steps').append('<li>' + step.trim() + '</li>');
+                    });
+    
+                    // Sincronizar el estado activo en la lista de servicios del modal
+                    $('.services_list .service-link').removeClass('active');
+                    $('.services_list .service-link[data-id="' + serviceId + '"]').parent().addClass('active');
+                    
+                    // Abrir el modal
+                    $.magnificPopup.open({
+                        items: {
+                            src: '#service-wrapper'
+                        },
+                        type: 'inline',
+                        callbacks: {
+                            // Al cerrar el modal, quitar la clase 'active'
+                            close: function() {
+                                $('.service-link').parent().removeClass('active');
+                            }
+                        }
+                    });
+                }
+            });
+        });
+    
+        // Sincronizar el estado activo cuando se abre desde la lista de servicios principal
+        $('.service-link').on('click', function() {
+            var serviceId = $(this).data('id');
+            
+            // Remover 'active' de todos los elementos de la lista en el modal
+            $('.services_list .service-link').parent().removeClass('active');
+            
+            // Añadir 'active' solo al enlace correspondiente en la lista del modal
+            $('.services_list .service-link[data-id="' + serviceId + '"]').parent().addClass('active');
+        });
+    });
+</script>
+{% endblock %}

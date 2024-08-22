@@ -1,0 +1,1 @@
+from .services_api_view import ServiceDetailView
