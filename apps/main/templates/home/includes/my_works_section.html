@@ -31,7 +31,7 @@
                     <div class="gutter-sizer"></div>
 
                     {% for work in works %}
-                        <div class="portfolio-item {{ work.category.name|slugify }}">
+                        <div class="portfolio-item {% for category in work.categories.all %}{{ category.name|slugify }} {% endfor %}">
                             <div class="image-box">
                                 <img src="{{ work.image.url }}" alt="{{ work.title }}" />
                             </div>
