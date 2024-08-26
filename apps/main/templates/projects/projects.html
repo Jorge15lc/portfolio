@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "Proyectos" %}{% endblock %}
+
+{% block extracss %}{% endblock %}
+
+{% block content %}
+    <section class="breadcrumb_area" data-bg-image="./assets/img/breadcrumb/breadcrumb-bg.jpg"
+        data-bg-color="#140C1C">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="breadcrumb_content d-flex flex-column align-items-center">
+                        <h2 class="title wow fadeInUp" data-wow-delay=".3s">{% trans "Mis Trabajos" %}</h2>
+                        <div class="breadcrumb_navigation wow fadeInUp" data-wow-delay=".5s">
+                            <span>
+                                <a href="{% url 'main:home' %}">{% trans "Inicio" %}</a>
+                            </span>
+                            <i class="far fa-long-arrow-right"></i>
+                            <span class="current-item">{% trans "Trabajos" %}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio-section" id="works-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center">
+                        <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">{% trans "Mis Trabajos Recientes" %}</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".4s">
+                            {% trans "Convertimos tus ideas y deseos en un proyecto web único que te inspire a ti y a tus clientes." %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="portfolio-filter text-center wow fadeInUp" data-wow-delay=".5s">
+                        <div class="button-group filter-button-group">
+                            <button data-filter="*" class="active">{% trans "Todos" %}</button>
+                            {% for category in categories %}
+                                <button data-filter=".{{ category.name|slugify }}">{{ category.name }}</button>
+                            {% endfor %}
+                            <div class="active-bg"></div>
+                        </div>
+                    </div>
+    
+                    <div class="portfolio-box wow fadeInUp" data-wow-delay=".6s">
+                        <div class="portfolio-sizer"></div>
+                        <div class="gutter-sizer"></div>
+    
+                        {% for work in works %}
+                            <div class="portfolio-item {% for category in work.categories.all %}{{ category.name|slugify }} {% endfor %}">
+                                <div class="image-box">
+                                    <img src="{{ work.image.url }}" alt="{{ work.title }}" />
+                                </div>
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">{{ work.title }}</h3>
+                                    <p>{{ work.description|safe }}</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper-{{ work.id }}" class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block modals %}
+    <!-- Portfolio Popup -->
+    {% for work in works %}
+        <div id="portfolio-wrapper-{{ work.id }}" class="popup_content_area zoom-anim-dialog mfp-hide" data-lenis-prevent>
+            <div class="popup_modal_img">
+                <img src="{{ work.image.url }}" alt="{{ work.title }}" />
+            </div>
+            <div class="popup_modal_content">
+                <div class="portfolio_info">
+                    <div class="portfolio_info_text">
+                        <h2 class="title">{{ work.title }}</h2>
+                        <div class="desc">
+                            <p>{{ work.description|safe }}</p>
+                        </div>
+                        <a href="{{ work.website }}" target="_blank" class="btn tj-btn-primary">{% trans "Ver" %} <i class="fal fa-arrow-right"></i></a>
+                    </div>
+                    <div class="portfolio_info_items">
+                        <div class="info_item">
+                            <div class="key">{% trans "Categorías" %}</div>
+                            <div class="value">
+                                {% for category in work.categories.all %}
+                                    {{ category.name }}{% if not forloop.last %}, {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="info_item">
+                            <div class="key">{% trans "Cliente" %}</div>
+                            <div class="value">{{ work.client }}</div>
+                        </div>
+                        <div class="info_item">
+                            <div class="key">{% trans "Fecha de inicio" %}</div>
+                            <div class="value">{{ work.start_date }}</div>
+                        </div>
+                        <div class="info_item">
+                            <div class="key">{% trans "Diseñador" %}</div>
+                            <div class="value">{{ work.designer }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio_gallery owl-carousel">
+                    {% for image in work.gallery_images.all %}
+                        <div class="gallery_item">
+                            <img src="{{ image.image.url }}" alt="" />
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="portfolio_description">
+                    <h2 class="title">{% trans "Descripción del proyecto" %}</h2>
+                    <div class="desc">
+                        <p>{{ work.project_description|safe }}</p>
+                    </div>
+                </div>
+                <div class="portfolio_story_approach">
+                    {% if work.story != '' %}
+                        <div class="portfolio_story">
+                            <div class="story_title">
+                                <h4 class="title">{% trans "La historia" %}</h4>
+                            </div>
+                            <div class="story_content">
+                                <p>{{ work.story|safe }}</p>
+                            </div>
+                        </div>
+                    {% endif %}
+                    {% if work.approach %}
+                        <div class="portfolio_approach">
+                            <div class="approach_title">
+                                <h4 class="title">{% trans "MI ENFOQUE" %}</h4>
+                            </div>
+                            <div class="approach_content">
+                                <p>{{ work.approach|safe }}</p>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    <!-- Portfolio Popup End -->
+{% endblock %}
+
+{% block extrajs %}{% endblock %}
