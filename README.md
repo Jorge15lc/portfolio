@@ -46,14 +46,7 @@ Soy Jorge Lasheras Castillo, un apasionado Desarrollador Full Stack y DevOps con
 ### Desarrollador Full Stack y DevOps | Grupo VyA | 2023 - Actualmente
 - Creación, despliegue y mantenimiento de aplicaciones ERP y Marketplace.
 - Diseño de bases de datos y desarrollo de Backend y Frontend con Python, Django, Postgres, HTML, CSS, JavaScript, JQuery y Postgis.
-
-## Proyectos Destacados
-
-### [Proyecto 1](#)
-Descripción breve del proyecto 1.
-
-### [Proyecto 2](#)
-Descripción breve del proyecto 2.
+  
 
 ## Educación
 
