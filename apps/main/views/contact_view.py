@@ -4,7 +4,7 @@ from django.urls import reverse_lazy
 from django.utils.translation import gettext as _
 from django.contrib import messages
 from ..forms import ContactForm
-from ..models import Contact
+from ..utils.send_telegram_msg import send_telegram_notification
 
 
 class ContactView(CreateView):
@@ -26,6 +26,17 @@ class ContactView(CreateView):
         if not self.request.user.is_authenticated:
             self.request.session['form_submitted'] = True
         # Mostrar un mensaje de éxito
+        contact_data = {
+            'first_name': form.cleaned_data['first_name'],
+            'last_name': form.cleaned_data['last_name'],
+            'email': form.cleaned_data['email'],
+            'phone': form.cleaned_data['phone'],
+            'service': form.cleaned_data['service'],
+            'message': form.cleaned_data['message']
+        }
+
+        # Enviar notificación a Telegram
+        send_telegram_notification(contact_data)
         messages.success(self.request, _('Tu mensaje ha sido enviado con éxito.\n Nos pondremos en contacto contigo lo antes posible.'))
         # Llamar a la implementación base para completar la validación
         return super().form_valid(form)
