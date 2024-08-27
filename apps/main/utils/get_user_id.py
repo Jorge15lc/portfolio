@@ -1,7 +1,8 @@
 import requests
+from django.conf import settings
 
 # Reemplaza 'TU_BOT_TOKEN' con el token que te dio BotFather
-token = '7475987283:AAGhJb3mGkkYNO_j1OJqsBPbQgz46T0yIXw'
+token = settings.TELEGRAM_BOT_TOKEN
 url = f'https://api.telegram.org/bot{token}/getUpdates'
 
 response = requests.get(url)
