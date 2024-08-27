@@ -1,4 +1,4 @@
-{% load static i18n %}
+{% load static i18n crispy_forms_tags %}
 
 <!-- CONTACT SECTION START -->
 <section class="contact-section" id="contact-section">
@@ -12,42 +12,38 @@
                     </div>
 
                     <div class="tj-contact-form">
-                        <form id="contact-form">
+                        <!-- Aquí conectamos el formulario de Django -->
+                        <form method="post" action="{% url 'main:contact' %}">
+                            {% csrf_token %}
                             <div class="row gx-3">
                                 <div class="col-sm-6">
                                     <div class="form_group">
-                                        <input type="text" name="conName" id="conName" placeholder="{% trans 'Nombre' %}" autocomplete="off" />
+                                        {{ form.first_name|as_crispy_field }}
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form_group">
-                                        <input type="text" name="conLName" id="conLName" placeholder="{% trans 'Apellido' %}" autocomplete="off" />
+                                        {{ form.last_name|as_crispy_field }}
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form_group">
-                                        <input type="email" name="conEmail" id="conEmail" placeholder="{% trans 'Correo Electrónico' %}" autocomplete="off" />
+                                        {{ form.email|as_crispy_field }}
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form_group">
-                                        <input type="tel" name="conPhone" id="conPhone" placeholder="{% trans 'Número de Teléfono' %}" autocomplete="off" />
+                                        {{ form.phone|as_crispy_field }}
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form_group">
-                                        <select name="conService" id="conService" class="tj-nice-select">
-                                            <option value="" selected disabled>{% trans 'Elige el Servicio' %}</option>
-                                            <option value="ecommerce">{% trans 'Desarrollo de eCommerce' %}</option>
-                                            <option value="marketplace">{% trans 'Desarrollo de Marketplace' %}</option>
-                                            <option value="erp-crm">{% trans 'Desarrollo de ERP y CRM' %}</option>
-                                            <option value="ai-integration">{% trans 'Integraciones de IA' %}</option>
-                                        </select>
+                                        {{ form.service|as_crispy_field }}
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form_group">
-                                        <textarea name="conMessage" id="conMessage" placeholder="{% trans 'Mensaje' %}"></textarea>
+                                        {{ form.message|as_crispy_field }}
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -79,7 +75,7 @@
                             </div>
                             <div class="text-box">
                                 <p>{% trans 'Email' %}</p>
-                                <a href="mailto:lasherascastillojorge@gmail.com">lasherascastillojorge@gmail.com</a>
+                                <a href="mailto:contacto@jorgelashtech.com">contacto@jorgelashtech.com</a>
                             </div>
                         </li>
                         <li class="d-flex flex-wrap align-items-center position-relative wow fadeInRight" data-wow-delay=".6s">

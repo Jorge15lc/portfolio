@@ -19,3 +19,48 @@
 <script src="{% static 'js/validate.min.js' %}"></script>
 <script src="{% static 'js/meanmenu.js' %}"></script>
 <script src="{% static 'js/main.js' %}"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    var djangoMessages = [
+        {% for message in messages %}
+            { 'text': "{{ message|escapejs }}", 'type': "{{ message.tags }}" },
+        {% endfor %}
+    ];
+    
+    if (djangoMessages.length > 0) {
+        djangoMessages.forEach(function(message) {
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 7000,
+                timerProgressBar: true,
+                background: '#333',  // Fondo oscuro para el toast
+                color: '#fff',  // Color de texto claro
+                iconColor: '#a5dc86',  // Color del icono
+                customClass: {
+                    popup: 'colored-toast'
+                },
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            });
+    
+            let iconType = 'info';
+            if (message.type.includes('success')) {
+                iconType = 'success';
+            } else if (message.type.includes('error')) {
+                iconType = 'error';
+            } else if (message.type.includes('warning')) {
+                iconType = 'warning';
+            }
+    
+            Toast.fire({
+                icon: iconType,
+                title: message.text
+            });
+        });
+    }
+</script>

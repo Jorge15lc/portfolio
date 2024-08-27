@@ -25,7 +25,7 @@ Soy Jorge Lasheras Castillo, un apasionado Desarrollador Full Stack y DevOps con
 
 ## Contacto
 
-- Email: lasherascastillojorge@gmail.com
+- Email: contacto@jorgelashtech.com
 - Teléfono: +34 666 366 242
 - Ubicación: Cenes de la Vega, Granada
 
@@ -102,7 +102,7 @@ class JorgeLasherasCastillo(FullStackDeveloper, DevOps):
         self.roles = ["Desarrollador Full Stack", "DevOps"]
         self.experience = 2  # años
         self.contact = {
-            "Email": "lasherascastillojorge@gmail.com",
+            "Email": "contacto@jorgelashtech.com",
             "Phone": "+34 666 366 242",
             "Location": "Cenes de la Vega, Granada"
         }
