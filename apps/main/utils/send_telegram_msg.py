@@ -1,4 +1,5 @@
 import requests
+from django.utils import timezone
 from django.conf import settings
 
 def send_telegram_notification(contact_data):
@@ -11,12 +12,13 @@ def send_telegram_notification(contact_data):
     token = settings.TELEGRAM_BOT_TOKEN
     chat_id = settings.TELEGRAM_CHAT_ID
     message = (
-        f"Nuevo mensaje de contacto:\n\n"
-        f"Nombre: {contact_data['first_name']} {contact_data['last_name']}\n"
-        f"Email: {contact_data['email']}\n"
-        f"Teléfono: {contact_data['phone']}\n"
-        f"Servicio: {contact_data['service']}\n"
-        f"Mensaje:\n{contact_data['message']}\n"
+        f"📩 *Nuevo Mensaje de Contacto* 📩\n\n"
+        f"👤 *Nombre:* {contact_data['first_name']} {contact_data['last_name']}\n"
+        f"✉️ *Email:* {contact_data['email']}\n"
+        f"📞 *Teléfono:* {contact_data['phone']}\n"
+        f"🛠️ *Servicio Solicitado:* {contact_data['service']}\n\n"
+        f"💬 *Mensaje:*\n_{contact_data['message']}_\n\n"
+        f"📅 *Fecha de Envío:* {timezone.now().strftime('%Y-%m-%d %H:%M:%S')}"
     )
     
     url = f"https://api.telegram.org/bot{token}/sendMessage"
