@@ -5,6 +5,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from .sitemaps import WorkSitemap, ServiceSitemap, CategorySitemap, StaticViewSitemap
+from apps.main.views import robots_txt
 
 sitemaps = {
     'works': WorkSitemap,
@@ -21,7 +22,9 @@ urlpatterns = [
 
     # SECTION - INCLUDES
     path("ckeditor5/", include('django_ckeditor_5.urls')),
+
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
+    path('robots.txt', robots_txt, name='robots_txt'),
 ]
 
 # Static files (CSS, JavaScript, Images)
