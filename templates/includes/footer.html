@@ -5,20 +5,23 @@
        <div class="row">
           <div class="col-md-12 text-center">
              <div class="footer-logo-box">
-                <a href="{% url 'main:home' %}"><img src="{% static 'img/logo/logo-circle-white-nobg.png' %}" alt="" /></a>
+                <a href="{% url 'main:home' %}" aria-label="Ir a Inicio">
+                  <img src="{% static 'img/logo/logo-circle-white-nobg.png' %}" alt="Logo JorgeLashtech"/>
+               </a>
              </div>
              <div class="footer-menu">
                 <nav>
-                   <ul>
-                      <li><a href="{% url 'main:about' %}">{% trans "Acerca de" %}</a></li>
-                      <li><a href="{% url 'main:services' %}">{% trans "Servicios" %}</a></li>
-                      <li><a href="{% url 'main:projects' %}">{% trans "Proyectos" %}</a></li>
-                      <li><a href="{% url 'main:contact' %}">{% trans "Contacto" %}</a></li>
-                   </ul>
+                     <ul>
+                        <li><a href="{% url 'main:home' %}" aria-label="Página de inicio">{% trans "Inicio" %}</a></li>
+                        <li><a href="{% url 'main:about' %}" aria-label="Página de Sobre Mí">{% trans "Acerca de" %}</a></li>
+                        <li><a href="{% url 'main:services' %}" aria-label="Página de Servicios">{% trans "Servicios" %}</a></li>
+                        <li><a href="{% url 'main:projects' %}" aria-label="Página de Proyectos">{% trans "Proyectos" %}</a></li>
+                        <li><a href="{% url 'main:contact' %}" aria-label="Página de Contacto">{% trans "Contacto" %}</a></li>
+                     </ul>
                 </nav>
              </div>
              <div class="copy-text">
-                <p>&copy; 2024 {% trans "Todos los derechos reservados" %} <a href="{% url 'main:home' %}" target="_blank">JorgeLashTech</a></p>
+                <p>&copy; 2024 {% trans "Todos los derechos reservados" %} <a href="{% url 'main:home' %}" target="_blank" aria-label="Ir a Inicio" class="text-white">JorgeLashTech</a></p>
              </div>
           </div>
        </div>
