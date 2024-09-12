@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from django_extensions.db.models import TimeStampedModel
 from django.utils.translation import gettext_lazy as _
 from django_ckeditor_5.fields import CKEditor5Field
@@ -80,6 +81,9 @@ class Work(TimeStampedModel):
 
     def __str__(self):
         return self.title
+    
+    def get_absolute_url(self):
+        return reverse('main:projects')
     
     class Meta:
         verbose_name = _("Trabajo")

@@ -11,3 +11,8 @@ class Contact(TimeStampedModel):
 
     def __str__(self):
         return f'{self.first_name} {self.last_name} - {self.email}'
+    
+    class Meta:
+        verbose_name = "Contacto"
+        verbose_name_plural = "Contactos"
+        ordering = ['id']

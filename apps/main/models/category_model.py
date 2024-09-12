@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from django_extensions.db.models import TimeStampedModel
 from django.utils.translation import gettext_lazy as _
 
@@ -17,6 +18,9 @@ class Category(TimeStampedModel):
 
     def __str__(self):
         return self.name
+    
+    def get_absolute_url(self):
+        return reverse("main:home")
     
     class Meta:
         verbose_name = _("Categoría")
