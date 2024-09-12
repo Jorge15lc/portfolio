@@ -16,6 +16,7 @@
       url("../fonts/flaticon_gerold.eot?9ece749f93b45dc5cc6e2c206d60c453#iefix") format("embedded-opentype"),
       url("../fonts/flaticon_gerold.ttf?9ece749f93b45dc5cc6e2c206d60c453") format("truetype"),
       url("../fonts/flaticon_gerold.svg?9ece749f93b45dc5cc6e2c206d60c453#flaticon_gerold") format("svg");
+   font-display: swap;
 }
 
 i[class^="flaticon-"]:before,

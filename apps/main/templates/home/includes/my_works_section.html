@@ -33,7 +33,7 @@
                     {% for work in works %}
                         <div class="portfolio-item {% for category in work.categories.all %}{{ category.name|slugify }} {% endfor %}">
                             <div class="image-box">
-                                <img src="{{ work.image.url }}" alt="{{ work.title }}" />
+                                <img src="{{ work.image.url }}" alt="{{ work.title }}" / loading="lazy">
                             </div>
                             <div class="content-box">
                                 <h3 class="portfolio-title">{{ work.title }}</h3>
@@ -55,7 +55,7 @@
     {% for work in works %}
         <div id="portfolio-wrapper-{{ work.id }}" class="popup_content_area zoom-anim-dialog mfp-hide" data-lenis-prevent>
             <div class="popup_modal_img">
-            <img src="{{ work.image.url }}" alt="{{ work.title }}" />
+            <img src="{{ work.image.url }}" alt="{{ work.title }}" / loading="lazy">
             </div>
             <div class="popup_modal_content">
             <div class="portfolio_info">
@@ -94,7 +94,7 @@
             <div class="portfolio_gallery owl-carousel">
                 {% for image in work.gallery_images.all %}
                     <div class="gallery_item">
-                        <img src="{{ image.image.url }}" alt="" />
+                        <img src="{{ image.image.url }}" alt="" / loading="lazy">
                     </div>
                 {% endfor %}
             </div>
