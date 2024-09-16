@@ -2,14 +2,16 @@
 
 <!-- Scripts JavaScript -->
 <script src="{% static 'js/jquery.min.js' %}"></script>
-<script src="{% static 'js/bootstrap.bundle.min.js' %}" defer></script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/gsap.min.js' %}"></script>
+<script src="{% static 'js/lenis.min.js' %}"></script>
+
+<!-- Scripts no críticos con defer -->
 <script src="{% static 'js/nice-select.min.js' %}" defer></script>
-<script src="{% static 'js/backToTop.js' %}" defer></script>
+<script src="{% static 'js/backToTop.js' %}" ></script>
 <script src="{% static 'js/appear.min.js' %}" defer></script>
-<script src="{% static 'js/wow.min.js' %}" defer></script>
-<script src="{% static 'js/gsap.min.js' %}" defer></script>
-<script src="{% static 'js/ScrollTrigger.min.js' %}" defer></script>
-<script src="{% static 'js/lenis.min.js' %}" defer></script>
+<script src="{% static 'js/wow.min.js' %}"></script>
+<script src="{% static 'js/ScrollTrigger.min.js' %}"></script>
 <script src="{% static 'js/lightcase.js' %}" defer></script>
 <script src="{% static 'js/owl.carousel.min.js' %}" defer></script>
 <script src="{% static 'js/swiper.min.js' %}" defer></script>
@@ -19,8 +21,9 @@
 <script src="{% static 'js/magnific-popup.js' %}" defer></script>
 <script src="{% static 'js/validate.min.js' %}" defer></script>
 <script src="{% static 'js/meanmenu.js' %}" defer></script>
-<script src="{% static 'js/main.js' %}"></script>
 
+<!-- Main JavaScript (sin defer si tiene funcionalidad crítica) -->
+<script src="{% static 'js/main.js' %}"></script>
 <!-- SweetAlert2 (puede diferirse si no es necesario de inmediato) -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
 <script>
