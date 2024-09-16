@@ -15,7 +15,10 @@
                     <h1 class="hero-title">{% trans "Desarrollador Web Full Stack +" %}<br />{% trans "Dev Ops" %}</h1>
 
                     <div class="hero-image-box d-md-none text-center">
-                        <img src="{% static 'img/hero/me.jpg' %}" alt="" / loading="lazy">
+                        <picture>
+                            <source srcset="{% static 'img/hero/me.webp' %}" type="image/webp">
+                            <img src="{% static 'img/hero/me.jpg' %}" alt="Foto de Jorge Lasheras Castillo">
+                        </picture>
                     </div>
 
                     <p class="lead">
@@ -42,7 +45,10 @@
             </div>
             <div class="col-md-6 d-none d-md-block">
                 <div class="hero-image-box text-center">
-                    <img src="{% static 'img/hero/me.jpg' %}" alt="Foto de Jorge Lasheras Castillo"/ loading="lazy">
+                    <picture>
+                        <source srcset="{% static 'img/hero/me.webp' %}" type="image/webp">
+                        <img src="{% static 'img/hero/me.jpg' %}" alt="Foto de Jorge Lasheras Castillo">
+                    </picture>
                 </div>
             </div>
         </div>
