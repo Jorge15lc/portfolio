@@ -16,8 +16,23 @@
 
                     <div class="hero-image-box d-md-none text-center">
                         <picture>
-                            <source srcset="{% static 'img/hero/me.webp' %}" type="image/webp">
-                            <img src="{% static 'img/hero/me.jpg' %}" alt="Foto de Jorge Lasheras Castillo">
+                            <!-- Fuente para navegadores que soporten WebP -->
+                            <source 
+                                srcset="{% static 'img/hero/me-small.webp' %} 300w, 
+                                        {% static 'img/hero/me-medium.webp' %} 500w, 
+                                        {% static 'img/hero/me.webp' %} 899w" 
+                                sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                type="image/webp">
+                            
+                            <!-- Fallback a JPEG para navegadores que no soporten WebP -->
+                            <img 
+                                src="{% static 'img/hero/me.jpg' %}" 
+                                srcset="{% static 'img/hero/me-small.jpg' %} 300w, 
+                                        {% static 'img/hero/me-medium.jpg' %} 500w, 
+                                        {% static 'img/hero/me.jpg' %} 899w" 
+                                sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                alt="Foto de Jorge Lasheras Castillo"
+                                loading="eager">
                         </picture>
                     </div>
 
@@ -46,8 +61,23 @@
             <div class="col-md-6 d-none d-md-block">
                 <div class="hero-image-box text-center">
                     <picture>
-                        <source srcset="{% static 'img/hero/me.webp' %}" type="image/webp">
-                        <img src="{% static 'img/hero/me.jpg' %}" alt="Foto de Jorge Lasheras Castillo">
+                        <!-- Fuente para navegadores que soporten WebP -->
+                        <source 
+                            srcset="{% static 'img/hero/me-small.webp' %} 300w, 
+                                    {% static 'img/hero/me-medium.webp' %} 500w, 
+                                    {% static 'img/hero/me.webp' %} 899w" 
+                            sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            type="image/webp">
+                        
+                        <!-- Fallback a JPEG para navegadores que no soporten WebP -->
+                        <img 
+                            src="{% static 'img/hero/me.jpg' %}" 
+                            srcset="{% static 'img/hero/me-small.jpg' %} 300w, 
+                                    {% static 'img/hero/me-medium.jpg' %} 500w, 
+                                    {% static 'img/hero/me.jpg' %} 899w" 
+                            sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            alt="Foto de Jorge Lasheras Castillo"
+                            loading="eager">
                     </picture>
                 </div>
             </div>
