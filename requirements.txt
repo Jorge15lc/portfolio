@@ -3,7 +3,7 @@ beautifulsoup4==4.12.3
 certifi==2024.7.4
 charset-normalizer==3.3.2
 crispy-bootstrap4==2022.1
-Django==5.1
+Django==5.1.4
 django-appconf==1.0.6
 django-bootstrap4-datetimepicker==4.2
 django-ckeditor-5==0.2.13
