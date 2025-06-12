@@ -23,6 +23,15 @@ Soy Jorge Lasheras Castillo, un apasionado Desarrollador Full Stack y DevOps con
 - Nginx
 - PostgreSQL
 
+### Especializaciones
+- **Python & Django** (Django REST Framework, Celery, pandas, numpy)
+- **Desarrollo a medida**: Marketplaces, ERPs/CRMs, plataformas B2B/B2C
+- **Frontend ligero**: HTML5, CSS3, Bootstrap, JavaScript, jQuery
+- **Mobile apps**: Flutter (Dart), integraciones nativas
+- **Bases de datos**: PostgreSQL (RDS), MySQL, MongoDB, Redis, Firebase Firestore
+- **DevOps básico**: Docker (multi-stage), Kubernetes (rolling updates, autoescalado), CI/CD (GitLab CI, GitHub Actions), orquestación con n8n y Make
+- **APIs & Seguridad**: REST/OpenAPI, OAuth2/JWT, OWASP, logging ELK
+
 ## Contacto
 
 - Email: contacto@jorgelashtech.com

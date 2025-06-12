@@ -94,7 +94,7 @@
             <div class="portfolio_gallery owl-carousel">
                 {% for image in work.gallery_images.all %}
                     <div class="gallery_item">
-                        <img src="{{ image.image.url }}" alt="" / loading="lazy">
+                        <img src="{{ image.image.url }}" alt="Imagen del proyecto {{ work.title }}" loading="lazy">
                     </div>
                 {% endfor %}
             </div>

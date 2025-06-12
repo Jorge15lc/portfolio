@@ -10,6 +10,9 @@ urlpatterns = [
     path('services/', views.ServicesView.as_view(), name='services'),
     path('contact/', views.ContactView.as_view(), name='contact'),
     path('projects/', views.ProjectsView.as_view(), name='projects'),
+    path('blog/marketplace-django-react/', views.BlogMarketplaceView.as_view(), name='blog_marketplace'),
+    path('blog/integracion-stripe-openai/', views.BlogStripeOpenAIView.as_view(), name='blog_stripe_openai'),
+    path('blog/cicd-gitlab-kubernetes/', views.BlogCICDView.as_view(), name='blog_cicd'),
 
 ]
 

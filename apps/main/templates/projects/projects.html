@@ -2,6 +2,8 @@
 {% load static i18n %}
 
 {% block title %}{% trans "Proyectos" %}{% endblock %}
+{% block meta_description %}Ejemplos de proyectos de desarrollo web y apps a medida realizados para distintos clientes.{% endblock %}
+{% block meta_keywords %}proyectos de desarrollo web, aplicaciones a medida, portfolio, marketplaces, ERP, CRM, Flutter, Docker, Kubernetes, CI/CD{% endblock %}
 
 {% block extracss %}{% endblock %}
 
@@ -117,7 +119,7 @@
                 <div class="portfolio_gallery owl-carousel">
                     {% for image in work.gallery_images.all %}
                         <div class="gallery_item">
-                            <img src="{{ image.image.url }}" alt="" / loading="lazy">
+                            <img src="{{ image.image.url }}" alt="Imagen del proyecto {{ work.title }}" loading="lazy">
                         </div>
                     {% endfor %}
                 </div>
@@ -128,10 +130,10 @@
                     </div>
                 </div>
                 <div class="portfolio_story_approach">
-                    {% if work.story != '' %}
+                    {% if work.story %}
                         <div class="portfolio_story">
                             <div class="story_title">
-                                <h4 class="title">{% trans "La historia" %}</h4>
+                                <h4 class="title">{% trans "Componentes Personalizados" %}</h4>
                             </div>
                             <div class="story_content">
                                 <p>{{ work.story|safe }}</p>
@@ -141,7 +143,7 @@
                     {% if work.approach %}
                         <div class="portfolio_approach">
                             <div class="approach_title">
-                                <h4 class="title">{% trans "MI ENFOQUE" %}</h4>
+                                <h4 class="title">{% trans "Impacto" %}</h4>
                             </div>
                             <div class="approach_content">
                                 <p>{{ work.approach|safe }}</p>

@@ -32,6 +32,21 @@
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://www.jorgelashtech.com/blog/marketplace-django-react/</loc>
+  <lastmod>2024-09-12T10:09:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.jorgelashtech.com/blog/integracion-stripe-openai/</loc>
+  <lastmod>2024-09-12T10:09:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.jorgelashtech.com/blog/cicd-gitlab-kubernetes/</loc>
+  <lastmod>2024-09-12T10:09:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://www.jorgelashtech.com/static/img/hero/Jorge_lasheras_castillo_CV.pdf</loc>
   <lastmod>2024-08-26T17:01:26+00:00</lastmod>
   <priority>0.80</priority>
