@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% block title %}Integración de Stripe y OpenAI en apps a medida{% endblock %}
+{% block meta_description %}Consejos para integrar pagos con Stripe y funcionalidades de IA con OpenAI en tus proyectos personalizados.{% endblock %}
+{% block meta_keywords %}Stripe, OpenAI, integraciones, desarrollo a medida, APIs, seguridad, OAuth2{% endblock %}
+
+{% block content %}
+<section class="breadcrumb_area" data-bg-image="{% static 'img/breadcrumb/breadcrumb-bg.webp' %}" data-bg-color="#140C1C">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="breadcrumb_content d-flex flex-column align-items-center">
+                    <h2 class="title wow fadeInUp" data-wow-delay=".3s">Integración de Stripe y OpenAI en apps a medida</h2>
+                    <div class="breadcrumb_navigation wow fadeInUp" data-wow-delay=".5s">
+                        <span><a href="{% url 'main:home' %}">Inicio</a></span>
+                        <i class="far fa-long-arrow-right"></i>
+                        <span class="current-item">Blog</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="blog-content">
+    <div class="container">
+        <p>Aprende a combinar pasarelas de pago seguras con Stripe y la potencia de OpenAI para crear aplicaciones realmente inteligentes y centradas en el usuario.</p>
+    </div>
+</section>
+{% endblock %}

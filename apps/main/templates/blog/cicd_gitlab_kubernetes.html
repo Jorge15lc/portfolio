@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% block title %}Buenas prácticas CI/CD con GitLab CI en Kubernetes{% endblock %}
+{% block meta_description %}Recomendaciones para crear pipelines de despliegue continuo usando GitLab CI y Kubernetes.{% endblock %}
+{% block meta_keywords %}CI/CD, GitLab CI, Kubernetes, DevOps, Docker, autoescalado{% endblock %}
+
+{% block content %}
+<section class="breadcrumb_area" data-bg-image="{% static 'img/breadcrumb/breadcrumb-bg.webp' %}" data-bg-color="#140C1C">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="breadcrumb_content d-flex flex-column align-items-center">
+                    <h2 class="title wow fadeInUp" data-wow-delay=".3s">Buenas prácticas CI/CD con GitLab CI en Kubernetes</h2>
+                    <div class="breadcrumb_navigation wow fadeInUp" data-wow-delay=".5s">
+                        <span><a href="{% url 'main:home' %}">Inicio</a></span>
+                        <i class="far fa-long-arrow-right"></i>
+                        <span class="current-item">Blog</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="blog-content">
+    <div class="container">
+        <p>Exploraremos cómo definir pipelines en GitLab CI y desplegarlos de forma eficiente en clústeres Kubernetes con estrategias de rolling updates.</p>
+    </div>
+</section>
+{% endblock %}

@@ -6,8 +6,12 @@
    <meta charset="utf-8" />
    <meta http-equiv="x-ua-compatible" content="ie=edge" />
    <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <meta name="description" content="Jorge Lasheras Castillo, desarrollador y programador especializado en Python. Desarrollo de aplicaciones web, móviles y software personalizado. Proyectos con Django, API REST y soluciones de IA. Contacta para desarrollar tus ideas.">
-   <meta name="keywords" content="Jorge Lasheras Castillo, desarrollador Python, programador Python, desarrollo web, aplicaciones móviles, proyectos en Python, desarrollador de software, programación de apps, Django, API REST, aplicaciones de IA, desarrollador freelance, desarrollo de eCommerce, backend developer">
+   <meta name="description" content="{% block meta_description %}Desarrollo web y aplicaciones a medida con Django y Python. Soluciones personalizadas que impulsan tu negocio.{% endblock %}">
+   <meta name="keywords" content="{% block meta_keywords %}desarrollo web a medida, aplicaciones a medida, Django, Python, proyectos personalizados, marketplaces, ERP, CRM, Flutter, Docker, Kubernetes, CI/CD{% endblock %}">
+   <meta name="skills" content="{% block meta_skills %}Python & Django (Django REST Framework, Celery, pandas, numpy); Desarrollo a medida: Marketplaces, ERPs/CRMs, plataformas B2B/B2C; Frontend ligero: HTML5, CSS3, Bootstrap, JavaScript, jQuery; Mobile apps: Flutter (Dart), integraciones nativas; Bases de datos: PostgreSQL (RDS), MySQL, MongoDB, Redis, Firebase Firestore; DevOps básico: Docker (multi-stage), Kubernetes (rolling updates, autoescalado), CI/CD (GitLab CI, GitHub Actions), orquestación con n8n y Make; APIs & Seguridad: REST/OpenAPI, OAuth2/JWT, OWASP, logging ELK{% endblock %}">
+   <link rel="canonical" href="{% block canonical %}{{ request.build_absolute_uri }}{% endblock %}">
+   <meta property="og:title" content="{% block og_title %}{% block title %}{% endblock %} | Portfolio{% endblock %}">
+   <meta property="og:description" content="{% block og_description %}{% block meta_description %}{% endblock %}{% endblock %}">
 
    <!-- Site Title -->
    <title>{% block title %}{% endblock %} | Portfolio</title>
